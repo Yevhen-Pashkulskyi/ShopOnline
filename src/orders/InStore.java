@@ -28,7 +28,7 @@ public class InStore implements Order {
     }
 
     @Override
-    public double calclulateTotalCost() {
+    public double calculateTotalCost() {
         double totalCoast = quantity * price;
 
         System.out.println("Підсумок замовлення в магазині: ");
