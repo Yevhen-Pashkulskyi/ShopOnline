@@ -25,6 +25,7 @@ public class InStore implements Order {
 
     @Override
     public double calclulateTotalCost() {
-        return 0;
+        double totalCoast = quantity * price;
+        return totalCoast;
     }
 }
