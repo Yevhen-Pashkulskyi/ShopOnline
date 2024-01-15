@@ -26,6 +26,12 @@ public class InStore implements Order {
     @Override
     public double calclulateTotalCost() {
         double totalCoast = quantity * price;
+
+        System.out.println("Підсумок замовлення в магазині: ");
+        System.out.printf("Товар: %s\n", productName);
+        System.out.printf("Кількість %s: %d\n", productName, quantity);
+        System.out.printf("Вартість %s за шт.: %.2f %s\n", productName, price, CURRENCY);
+        System.out.printf("Загальа вартітсь %.2f %s", totalCoast, CURRENCY);
         return totalCoast;
     }
 }
