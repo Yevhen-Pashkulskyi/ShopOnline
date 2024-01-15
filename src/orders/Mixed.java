@@ -33,6 +33,23 @@ public class Mixed implements Order {
     }
     @Override
     public double calculateTotalCost() {
-        return 0;
+
+        System.out.println("Підсумок замовлення:");
+        System.out.printf("Кількість %s для самовивозу: %s\n", productName, pickupQuantity);
+
+        double pickupCost = pickupQuantity * price;
+        System.out.printf("Вартість %s для самовивозу: %.2f %s\n", productName, pickupCost, CURRENCY);
+        System.out.printf("Кількість %s для доставки: %s\n", productName, deliveryQuantity);
+
+        double deliveryCost = deliveryQuantity * price * (DELIVERY_COST_PERCENTAGE / 100.0);
+        double costPickupProduct = deliveryQuantity * price;
+
+        System.out.printf("Вартість доставки %s: %.2f %s\n", productName, deliveryCost, CURRENCY);
+        System.out.printf("Вартість %s для доставки %.2f %s\n", productName, costPickupProduct, CURRENCY);
+
+        double totalCost = pickupCost + deliveryCost + costPickupProduct;
+        System.out.printf("Загальна вартість (включаючи доставку): %.2f %s", totalCost, CURRENCY);
+
+        return totalCost;
     }
 }
