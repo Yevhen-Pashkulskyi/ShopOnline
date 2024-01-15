@@ -10,6 +10,10 @@ public class InStore implements Order {
     private int quantity;
     private int price;
 
+    public InStore() {
+        enterOrderDetails();
+    }
+
     private void enterOrderDetails() {
         Scanner scanner = new Scanner(System.in);
 
