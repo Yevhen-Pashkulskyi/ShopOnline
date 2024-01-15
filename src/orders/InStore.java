@@ -8,7 +8,7 @@ public class InStore implements Order {
     private static final String CURRENCY = "USD";
     private String productName;
     private int quantity;
-    private int price;
+    private double price;
 
     public InStore() {
         enterOrderDetails();
@@ -24,7 +24,7 @@ public class InStore implements Order {
         quantity = scanner.nextInt();
 
         System.out.printf("Введіть вартість %s в %s за шт.:", productName, CURRENCY);
-        price = scanner.nextInt();
+        price = scanner.nextDouble();
     }
 
     @Override
